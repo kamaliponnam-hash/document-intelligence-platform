@@ -1,0 +1,26 @@
+# Environment / secrets
+.env
+*.env.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+
+# Database / storage
+backend/storage/*.db
+backend/storage/uploads/*
+!backend/storage/uploads/.gitkeep
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Docker
+*.log

@@ -1,0 +1,72 @@
+{
+  "document_name": "Consolidated_Balance_Sheet_2023.pdf",
+  "document_type": "balance_sheet",
+  "processing_status": "PASS",
+  "overall_confidence": null,
+  "file_validation": {
+    "file_type": "application/pdf",
+    "is_supported": true,
+    "is_readable": true,
+    "page_count": 1,
+    "status": "PASS",
+    "reason": null
+  },
+  "extracted_data": {
+    "total_assets": {
+      "value": 452300.00,
+      "page_number": 1,
+      "evidence": {"source_text": "TOTAL ASSETS 452,300.00", "page_number": 1}
+    },
+    "total_liabilities": {
+      "value": 268100.00,
+      "page_number": 1,
+      "evidence": {"source_text": "TOTAL LIABILITIES 268,100.00", "page_number": 1}
+    },
+    "total_equity": {
+      "value": 184200.00,
+      "page_number": 1,
+      "evidence": {"source_text": "TOTAL EQUITY 184,200.00", "page_number": 1}
+    },
+    "header": {
+      "company_name": "Sample Consolidated Group Ltd.",
+      "currency": "USD",
+      "period_current": "31 March 2023",
+      "period_comparative": "31 March 2022"
+    },
+    "statement_items": [
+      {"label": "Cash and cash equivalents", "current_period_value": 52300.00, "comparative_period_value": 41000.00, "current_period_label": "2023", "comparative_period_label": "2022", "page_number": 1},
+      {"label": "Trade receivables", "current_period_value": 98000.00, "comparative_period_value": 87500.00, "current_period_label": "2023", "comparative_period_label": "2022", "page_number": 1},
+      {"label": "Inventory", "current_period_value": 64000.00, "comparative_period_value": 58200.00, "current_period_label": "2023", "comparative_period_label": "2022", "page_number": 1},
+      {"label": "Property, plant & equipment", "current_period_value": 238000.00, "comparative_period_value": 221000.00, "current_period_label": "2023", "comparative_period_label": "2022", "page_number": 1},
+      {"label": "Trade payables", "current_period_value": -112000.00, "comparative_period_value": -98400.00, "current_period_label": "2023", "comparative_period_label": "2022", "page_number": 1},
+      {"label": "Borrowings", "current_period_value": -156100.00, "comparative_period_value": -140000.00, "current_period_label": "2023", "comparative_period_label": "2022", "page_number": 1},
+      {"label": "Share capital", "current_period_value": -100000.00, "comparative_period_value": -100000.00, "current_period_label": "2023", "comparative_period_label": "2022", "page_number": 1},
+      {"label": "Reserves and surplus", "current_period_value": -84200.00, "comparative_period_value": -69500.00, "current_period_label": "2023", "comparative_period_label": "2022", "page_number": 1}
+    ]
+  },
+  "validation": {
+    "checks": [
+      {
+        "name": "balance_sheet_equation_check",
+        "formula": "total_liabilities + total_equity",
+        "operands": {"total_liabilities": 268100.00, "total_equity": 184200.00},
+        "calculated_value": 452300.00,
+        "reported_value": 452300.00,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": null,
+        "message": null
+      }
+    ],
+    "overall_status": "PASS",
+    "issues": []
+  },
+  "processing_metadata": {
+    "ocr_used": true,
+    "processed_at": "2026-09-08T10:20:05Z",
+    "processing_time_ms": 5480,
+    "llm_model": "claude-3-5-sonnet-20241022",
+    "extraction_mode": "llm"
+  },
+  "error": null
+}

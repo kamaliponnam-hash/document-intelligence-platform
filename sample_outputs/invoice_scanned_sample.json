@@ -1,0 +1,89 @@
+{
+  "document_name": "X51005806685.jpg",
+  "document_type": "invoice",
+  "processing_status": "PASS",
+  "overall_confidence": null,
+  "file_validation": {
+    "file_type": "image/jpeg",
+    "is_supported": true,
+    "is_readable": true,
+    "page_count": 1,
+    "status": "PASS",
+    "reason": null
+  },
+  "extracted_data": {
+    "invoice_number": {
+      "value": "INV-88213",
+      "page_number": 1,
+      "evidence": {"source_text": "INVOICE NO: INV-88213", "page_number": 1}
+    },
+    "invoice_date": {
+      "value": "2019-05-14",
+      "page_number": 1,
+      "evidence": {"source_text": "DATE: 14/05/2019", "page_number": 1}
+    },
+    "vendor_name": {
+      "value": "SUNSHINE HARDWARE SDN BHD",
+      "page_number": 1,
+      "evidence": {"source_text": "SUNSHINE HARDWARE SDN BHD", "page_number": 1}
+    },
+    "customer_name": {
+      "value": null,
+      "page_number": null
+    },
+    "currency": {
+      "value": "MYR",
+      "page_number": 1,
+      "evidence": {"source_text": "TOTAL: MYR 84.20", "page_number": 1}
+    },
+    "subtotal": {
+      "value": 79.43,
+      "page_number": 1,
+      "evidence": {"source_text": "SUBTOTAL 79.43", "page_number": 1}
+    },
+    "tax_amount": {
+      "value": 4.77,
+      "page_number": 1,
+      "evidence": {"source_text": "GST 6% 4.77", "page_number": 1}
+    },
+    "discount": {
+      "value": 0.0,
+      "page_number": 1
+    },
+    "total_amount": {
+      "value": 84.20,
+      "page_number": 1,
+      "evidence": {"source_text": "TOTAL: MYR 84.20", "page_number": 1}
+    },
+    "line_items": [
+      {"description": "Cable Ties 100pcs", "quantity": 2, "unit_price": 12.50, "amount": 25.00, "page_number": 1},
+      {"description": "Hex Bolts M8", "quantity": 5, "unit_price": 3.80, "amount": 19.00, "page_number": 1},
+      {"description": "Paint Roller Set", "quantity": 1, "unit_price": 35.43, "amount": 35.43, "page_number": 1}
+    ]
+  },
+  "validation": {
+    "checks": [
+      {
+        "name": "invoice_total_check",
+        "formula": "subtotal + tax_amount - discount",
+        "operands": {"subtotal": 79.43, "tax_amount": 4.77, "discount": 0.0},
+        "calculated_value": 84.20,
+        "reported_value": 84.20,
+        "variance": 0.0,
+        "status": "PASS",
+        "period": null,
+        "message": null
+      }
+    ],
+    "overall_status": "PASS",
+    "issues": ["Missing required fields: customer_name"]
+  },
+  "processing_metadata": {
+    "ocr_used": true,
+    "processed_at": "2026-09-08T10:12:41Z",
+    "processing_time_ms": 3120,
+    "llm_model": "claude-3-5-sonnet-20241022",
+    "extraction_mode": "llm"
+  },
+  "error": null
+}

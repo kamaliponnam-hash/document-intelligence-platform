@@ -1,0 +1,104 @@
+{
+  "document_name": "Consolidated_Profit_and_Loss_2023.pdf",
+  "document_type": "profit_and_loss",
+  "processing_status": "PASS",
+  "overall_confidence": null,
+  "file_validation": {
+    "file_type": "application/pdf",
+    "is_supported": true,
+    "is_readable": true,
+    "page_count": 1,
+    "status": "PASS",
+    "reason": null
+  },
+  "extracted_data": {
+    "revenue": {
+      "value": 610000.00,
+      "page_number": 1,
+      "evidence": {"source_text": "Total Revenue 610,000.00", "page_number": 1}
+    },
+    "cost_of_sales": {
+      "value": 366000.00,
+      "page_number": 1,
+      "evidence": {"source_text": "Cost of Sales 366,000.00", "page_number": 1}
+    },
+    "gross_profit": {
+      "value": 244000.00,
+      "page_number": 1,
+      "evidence": {"source_text": "Gross Profit 244,000.00", "page_number": 1}
+    },
+    "operating_expenses": {
+      "value": 132000.00,
+      "page_number": 1,
+      "evidence": {"source_text": "Operating Expenses 132,000.00", "page_number": 1}
+    },
+    "operating_profit": {
+      "value": 112000.00,
+      "page_number": 1,
+      "evidence": {"source_text": "Operating Profit 112,000.00", "page_number": 1}
+    },
+    "tax": {
+      "value": 28000.00,
+      "page_number": 1,
+      "evidence": {"source_text": "Taxation 28,000.00", "page_number": 1}
+    },
+    "net_profit": {
+      "value": 84000.00,
+      "page_number": 1,
+      "evidence": {"source_text": "Net Profit for the Year 84,000.00", "page_number": 1}
+    },
+    "header": {
+      "company_name": "Sample Consolidated Group Ltd.",
+      "currency": "USD",
+      "period_current": "Year ended 31 March 2023",
+      "period_comparative": "Year ended 31 March 2022"
+    },
+    "statement_items": [
+      {"label": "Interest earned", "current_period_value": 5200.00, "comparative_period_value": 4100.00, "page_number": 1},
+      {"label": "Other income", "current_period_value": 3100.00, "comparative_period_value": 2600.00, "page_number": 1},
+      {"label": "Depreciation", "current_period_value": -18000.00, "comparative_period_value": -16500.00, "page_number": 1},
+      {"label": "Earnings per share (basic)", "current_period_value": 4.20, "comparative_period_value": 3.85, "page_number": 1}
+    ]
+  },
+  "validation": {
+    "checks": [
+      {
+        "name": "gross_profit_check",
+        "formula": "revenue - cost_of_sales",
+        "operands": {"revenue": 610000.00, "cost_of_sales": 366000.00},
+        "calculated_value": 244000.00,
+        "reported_value": 244000.00,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "operating_profit_check",
+        "formula": "gross_profit - operating_expenses",
+        "operands": {"gross_profit": 244000.00, "operating_expenses": 132000.00},
+        "calculated_value": 112000.00,
+        "reported_value": 112000.00,
+        "variance": 0.0,
+        "status": "PASS"
+      },
+      {
+        "name": "net_profit_check",
+        "formula": "operating_profit - tax",
+        "operands": {"operating_profit": 112000.00, "tax": 28000.00},
+        "calculated_value": 84000.00,
+        "reported_value": 84000.00,
+        "variance": 0.0,
+        "status": "PASS"
+      }
+    ],
+    "overall_status": "PASS",
+    "issues": []
+  },
+  "processing_metadata": {
+    "ocr_used": true,
+    "processed_at": "2026-09-08T10:24:11Z",
+    "processing_time_ms": 4890,
+    "llm_model": "claude-3-5-sonnet-20241022",
+    "extraction_mode": "llm"
+  },
+  "error": null
+}

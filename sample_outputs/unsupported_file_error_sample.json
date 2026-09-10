@@ -1,0 +1,31 @@
+{
+  "document_name": "random_notes.txt",
+  "document_type": "invoice",
+  "processing_status": "FAILED",
+  "overall_confidence": null,
+  "file_validation": {
+    "file_type": "unknown",
+    "is_supported": false,
+    "is_readable": false,
+    "page_count": 0,
+    "status": "FAILED",
+    "reason": "Only PDF / JPG / PNG documents are supported."
+  },
+  "extracted_data": {},
+  "validation": {
+    "checks": [],
+    "overall_status": "NOT_APPLICABLE",
+    "issues": ["Only PDF / JPG / PNG documents are supported."]
+  },
+  "processing_metadata": {
+    "ocr_used": false,
+    "processed_at": "2026-09-08T11:05:44Z",
+    "processing_time_ms": 12,
+    "llm_model": null,
+    "extraction_mode": null
+  },
+  "error": {
+    "code": "UNSUPPORTED_FILE_TYPE",
+    "message": "Only PDF / JPG / PNG documents are supported."
+  }
+}

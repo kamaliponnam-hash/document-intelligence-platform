@@ -1,0 +1,54 @@
+{
+  "document_name": "invoice_with_total_mismatch.jpg",
+  "document_type": "invoice",
+  "processing_status": "FAILED",
+  "overall_confidence": null,
+  "file_validation": {
+    "file_type": "image/jpeg",
+    "is_supported": true,
+    "is_readable": true,
+    "page_count": 1,
+    "status": "PASS",
+    "reason": null
+  },
+  "extracted_data": {
+    "invoice_number": {"value": "INV-77120", "page_number": 1},
+    "invoice_date": {"value": "2024-02-02", "page_number": 1},
+    "vendor_name": {"value": "Riverside Stationery Supplies", "page_number": 1},
+    "customer_name": {"value": null, "page_number": null},
+    "currency": {"value": "USD", "page_number": 1},
+    "subtotal": {"value": 150.00, "page_number": 1},
+    "tax_amount": {"value": 12.00, "page_number": 1},
+    "discount": {"value": 0.00, "page_number": 1},
+    "total_amount": {"value": 175.00, "page_number": 1,
+      "evidence": {"source_text": "TOTAL DUE: 175.00", "page_number": 1}},
+    "line_items": [
+      {"description": "A4 Paper Ream x10", "quantity": 10, "unit_price": 8.00, "amount": 80.00, "page_number": 1},
+      {"description": "Ink Cartridge Set", "quantity": 2, "unit_price": 35.00, "amount": 70.00, "page_number": 1}
+    ]
+  },
+  "validation": {
+    "checks": [
+      {
+        "name": "invoice_total_check",
+        "formula": "subtotal + tax_amount - discount",
+        "operands": {"subtotal": 150.00, "tax_amount": 12.00, "discount": 0.00},
+        "calculated_value": 162.00,
+        "reported_value": 175.00,
+        "variance": -13.00,
+        "status": "FAIL",
+        "message": null
+      }
+    ],
+    "overall_status": "FAIL",
+    "issues": ["invoice_total_check", "Missing required fields: customer_name"]
+  },
+  "processing_metadata": {
+    "ocr_used": true,
+    "processed_at": "2026-09-08T11:02:19Z",
+    "processing_time_ms": 2870,
+    "llm_model": "claude-3-5-sonnet-20241022",
+    "extraction_mode": "llm"
+  },
+  "error": null
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document Intelligence Platform</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>📄 Document Intelligence Platform</h1>
+    <a href="/docs" target="_blank">API Docs (Swagger)</a>
+  </header>
+
+  <main>
+    <div id="error-banner" class="error-banner"></div>
+
+    <section class="card">
+      <h2>Upload &amp; Process a Document</h2>
+      <form id="upload-form" class="upload-form">
+        <div class="field">
+          <label for="document-type">Document Type</label>
+          <select id="document-type" name="document_type" required>
+            <option value="invoice">Invoice</option>
+            <option value="balance_sheet">Balance Sheet</option>
+            <option value="profit_and_loss">Profit &amp; Loss</option>
+            <option value="cash_flow_statement">Cash Flow Statement</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="file-input">File (PDF / JPG / PNG, max 3 pages)</label>
+          <input type="file" id="file-input" name="file" accept=".pdf,.jpg,.jpeg,.png" required />
+        </div>
+        <div class="field">
+          <button id="submit-btn" type="submit">Process Document</button>
+        </div>
+      </form>
+      <p id="upload-status" class="muted" style="margin-top:10px;"></p>
+    </section>
+
+    <section class="card">
+      <h2>Processed Documents</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Document Name</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Validation</th>
+            <th>OCR</th>
+            <th>Processed At</th>
+          </tr>
+        </thead>
+        <tbody id="documents-body">
+          <tr><td colspan="6" class="muted">Loading...</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="/static/js/app.js"></script>
+  <script>initDashboard();</script>
+</body>
+</html>

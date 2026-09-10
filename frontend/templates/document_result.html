@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document Result</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1 id="doc-title">Document Result</h1>
+    <a href="/">&larr; Back to Dashboard</a>
+  </header>
+
+  <main>
+    <div id="error-banner" class="error-banner"></div>
+
+    <div style="margin-bottom:16px;">
+      <span class="badge" id="doc-type-badge" style="background:#e2e8f0;color:#334155;"></span>
+      <span class="badge" id="doc-status-badge"></span>
+    </div>
+
+    <div id="result-container">
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('tab-summary', this)">Summary</button>
+        <button class="tab-btn" onclick="switchTab('tab-json', this)">Raw JSON</button>
+      </div>
+
+      <div id="tab-summary" class="tab-panel">
+        <section class="card">
+          <h2>File Validation</h2>
+          <div id="file-validation" class="kv-grid"></div>
+        </section>
+
+        <section class="card">
+          <h2>Extracted Fields</h2>
+          <div id="extracted-fields" class="kv-grid"></div>
+        </section>
+
+        <section class="card">
+          <h2>Line Items / Statement Items</h2>
+          <div id="items-section"></div>
+        </section>
+
+        <section class="card">
+          <h2>Financial Validation</h2>
+          <div id="validation-section"></div>
+        </section>
+
+        <section class="card">
+          <h2>Processing Metadata</h2>
+          <div id="processing-metadata" class="kv-grid"></div>
+        </section>
+      </div>
+
+      <div id="tab-json" class="tab-panel" style="display:none;">
+        <section class="card">
+          <h2>Raw Structured JSON</h2>
+          <pre class="json-view" id="raw-json"></pre>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="/static/js/app.js"></script>
+  <script>
+    initDocumentResult({{ document_name | tojson }});
+  </script>
+</body>
+</html>
