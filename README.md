@@ -179,11 +179,11 @@ as build context, set the same environment variables, and deploy.
 > `DATABASE_URL` at a free-tier managed Postgres instance (e.g. Render's
 > free Postgres, Neon, Supabase) instead of the default SQLite file.
 
-### Deliverable URLs (fill in after deploying)
-- Live frontend URL: `<TODO>`
-- Live backend API base URL: `<TODO>` (same as frontend URL, per §1)
-- Swagger/OpenAPI URL: `<TODO>/docs`
-- Public GitHub repository: `<TODO>`
+### Deliverable URLs
+- Live frontend URL: https://document-intelligence-platform-q4ua.onrender.com/
+- Live backend API base URL: https://document-intelligence-platform-q4ua.onrender.com/api/v1
+- Swagger/OpenAPI URL: https://document-intelligence-platform-q4ua.onrender.com/docs
+- Public GitHub repository: https://github.com/kamaliponnam-hash/document-intelligence-platform
 
 ## 7. OCR / Extraction Approach
 
